@@ -14,9 +14,10 @@ class ManejoArchivo:
 
 
     def manejoXML(self):
-
-        listaPisos = ListaDobleEnlazada()
-        listaPatrones = ListaDobleEnlazada()
+        
+        
+        listaPisos = ListaDobleEnlazada()    #Lista que guarda los pisos
+        listaPatrones = ListaDobleEnlazada()  #Lista auxiliar para guardar los patrones
                     
         tree = ET.parse('prueva.xml')
         raiz = tree.getroot()
