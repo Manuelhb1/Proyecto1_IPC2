@@ -1,7 +1,7 @@
 
 from nodo import Nodo
 
-class ListaDobleEnlazada():
+class ListaDobleEnlazada:
 
     def __init__(self):
         self.primero = None
@@ -24,18 +24,18 @@ class ListaDobleEnlazada():
         aux = self.primero
         while aux:
             print(aux.dato)
+            #return aux.dato
             aux = aux.siguiente
     
-    def recorrerFin(self):
-        aux = self.ultimo
-        while aux:
-            print(aux.dato)
-            aux = aux.anterior
+    #def recorrerFin(self):
+    #    aux = self.ultimo
+    #    while aux:
+    #        print(aux.dato)
+    #        aux = aux.anterior
 
     #---------Busca un dato por su posicion iniciando en 0, por insercion al inicio
     def buscarPosicion(self, posicion):
         aux = self.primero
-        print("tamaño --->",self.tamanio)
         
         posList = 0
         while aux:
@@ -43,7 +43,7 @@ class ListaDobleEnlazada():
                 return "Error indice fuera de rango" 
                             
             if posList == posicion:
-                return aux.dato            
+                return aux.dato
             posList += 1
             aux = aux.siguiente
             
