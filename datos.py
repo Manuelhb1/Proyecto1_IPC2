@@ -2,11 +2,11 @@
 
 class Piso():
     
-    def __init__(self, nombre = "", filas = 0, columnas = 0, precioVoltear = 0, precioCambiar = 0, patrones = None):
+    def __init__(self, nombre, fila, columna, voltear, cambiar, patrones):
         self.nombre = nombre
-        self.filas = filas
-        self.columnas = columnas
-        self.precioVoltear = precioVoltear
-        self.precioCambiar = precioCambiar
+        self.fila = fila
+        self.columna = columna
+        self.voltear = voltear
+        self.cambiar = cambiar
         self.patrones = patrones
         

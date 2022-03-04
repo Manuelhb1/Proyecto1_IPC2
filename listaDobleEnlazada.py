@@ -23,10 +23,20 @@ class ListaDobleEnlazada:
     def recorrerInicio(self):
         aux = self.primero
         while aux:
-            print(aux.dato)
-            #return aux.dato
+            print(aux.dato,end="-")
+            aux = aux.siguiente 
+
+
+    def recorrer(self):
+        if self.vacia():
+            return "Lista vacia"
+        aux = self.primero
+        print(aux.dato,end = "-")
+        while aux.siguiente:
             aux = aux.siguiente
-    
+            print(aux.dato, end = "-")            
+
+
     #def recorrerFin(self):
     #    aux = self.ultimo
     #    while aux:
@@ -34,9 +44,9 @@ class ListaDobleEnlazada:
     #        aux = aux.anterior
 
     #---------Busca un dato por su posicion iniciando en 0, por insercion al inicio
+    
     def buscarPosicion(self, posicion):
-        aux = self.primero
-        
+        aux = self.primero        
         posList = 0
         while aux:
             if posicion>(self.tamanio-1):
