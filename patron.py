@@ -1,8 +1,8 @@
 
 class Patron:
 
-    def __init__(self, nombre = "", cod = ""):
+    def __init__(self, codigo, patron):
 
-        self.nombre = nombre
-        self.cod = cod
+        self.codigo = codigo
+        self.patron = patron
 
