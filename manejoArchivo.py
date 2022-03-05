@@ -7,8 +7,8 @@ import xml.etree.ElementTree as ET
 from patron import Patron
 
 class ManejoArchivo:
-
      
+    pisos = None
     def manejoXML(self):        
         
         listaPisos = ListaDobleEnlazada()             
@@ -41,7 +41,7 @@ class ManejoArchivo:
         listapisos = self.manejoXML()
 
         for y in range(listapisos.tamanio):
-            print(f"Nombre: {listapisos.buscarPosicion(y).nombre}\nFilas: {listapisos.buscarPosicion(y).fila}\nColumnas {listapisos.buscarPosicion(y).columna}\nPrecio voltear: {listapisos.buscarPosicion(y).voltear}\nPrecio Cambiar: {listapisos.buscarPosicion(y).cambiar}")
+            print(f"Nombre:               {listapisos.buscarPosicion(y).nombre}\nFilas: {listapisos.buscarPosicion(y).fila:16}\nColumnas {listapisos.buscarPosicion(y).columna:14}\nPrecio voltear: {listapisos.buscarPosicion(y).voltear:10}\nPrecio Cambiar: {listapisos.buscarPosicion(y).cambiar:10}")
             
             for x in range(listapisos.buscarPosicion(y).patrones.tamanio):
                 print(listapisos.buscarPosicion(y).patrones.buscarPosicion(x).codigo)
