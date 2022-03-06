@@ -1,0 +1,13 @@
+// Mostrando patron
+digraph {
+	graph [layout=osage]
+	node [fillcolor=white fontcolor=black layout=osage shape=box style=filled]
+	nodo0 [label=B color=black fillcolor=black fontcolor=white]
+	nodo1 [label=W]
+	nodo2 [label=B color=black fillcolor=black fontcolor=white]
+	nodo3 [label=W]
+	nodo4 [label=W]
+	nodo5 [label=W]
+	nodo6 [label=W]
+	nodo7 [label=W]
+}
