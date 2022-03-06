@@ -21,6 +21,9 @@ class ListaDobleEnlazada:
         self.tamanio += 1
     
     def recorrerInicio(self):
+        if self.vacia():
+            return "Lista vacia"
+            
         aux = self.primero
         while aux:
             print(aux.dato,end="-")
