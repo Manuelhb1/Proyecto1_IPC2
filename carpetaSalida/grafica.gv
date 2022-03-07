@@ -1,13 +1,13 @@
 // Mostrando patron
 digraph {
-	graph [layout=osage]
-	node [fillcolor=white fontcolor=black layout=osage shape=box style=filled]
-	nodo0 [label=B color=black fillcolor=black fontcolor=white]
-	nodo1 [label=W]
-	nodo2 [label=B color=black fillcolor=black fontcolor=white]
-	nodo3 [label=W]
+	graph [layout=dot]
+	node [fillcolor=white fontcolor=black shape=box style=filled]
+	nodo0 [label=W]
+	nodo1 [label=B color=black fillcolor=black fontcolor=white]
+	nodo2 [label=W]
+	nodo3 [label=B color=black fillcolor=black fontcolor=white]
 	nodo4 [label=W]
 	nodo5 [label=W]
 	nodo6 [label=W]
-	nodo7 [label=W]
+	nodo7 [label=B color=black fillcolor=black fontcolor=white]
 }
