@@ -96,20 +96,52 @@ class ManejoArchivo:
 
     def mostrarConGraphviz(self):
 
-        dot = Digraph(comment = 'Mostrando patron', node_attr = {"shape": "box", "style": "filled","fontcolor":"black", "fillcolor":"white", "layout":"osage", "style":"invis"}, graph_attr = {"layout":"osage"})
+        dot = Digraph(comment = 'Mostrando patron', node_attr = {"shape": "box", "style": "filled","fontcolor":"black", "fillcolor":"white"}, graph_attr = {"layout":"dot"})
+        grapRank = Digraph()
+        grapRank.attr(rank="same")
+       
         nodo =""
         cont = 0
+        contAux = 0
+        contRank = 0
         for i in range(self.getPosActualPatron().tamanio):
             
             nodo = "nodo" + str(cont)
+            nodo2 = "nodo"+ str(cont+1)
           
             if self.getPosActualPatron().buscarPosicion(i) == "B":
                 dot.node(nodo, self.getPosActualPatron().buscarPosicion(i), fontcolor="white", color="black", fillcolor = "black")
                 
+                """if cont < self.getPosActualPatron().tamanio-1:
+                    dot.edge(nodo, nodo2)"""
+
+
+
+                
             else:
                 dot.node(nodo, self.getPosActualPatron().buscarPosicion(i))
-
+                """if cont < (self.getPosActualPatron().tamanio)-1:
+                    dot.edge(nodo,nodo2)"""
             cont += 1
+
+            
+        for fila in range(self.getPisoActual().fila):
+
+            nodorank = "nodo"+str(contRank)
+
+            for columna in range(self.getPisoActual().columna):
+                xxx=0
+                """nodo = "nodo"+str(cont)
+                if self.getPosActualPatron().buscarPosicion(cont) == "B":
+                    dot.node(nodo, self.getPosActualPatron().buscarPosicion(cont), fontcolor="white", color="black", fillcolor = "black")
+                
+                else:
+                    dot.node(nodo, self.getPosActualPatron().buscarPosicion(cont))
+                cont+=1"""
+            grapRank.node(nodorank)
+            contRank += columna   
+
+        #dot.subgraph(grapRank)             
 
         dot.render('carpetaSalida/grafica.gv',format='jpg', view=True) 
 
